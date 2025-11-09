@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Counter from "./Counter";
-import Intro from "./intro";
+import Intro from "./Intro";
 import Menu from ".//Menu";
 
 const Container = () => {
