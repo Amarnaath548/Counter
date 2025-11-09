@@ -9,7 +9,7 @@ const Container = () => {
     "bg-linear-to-r from-gray-900 via-gray-800 to-gray-900"
   );
   const handleMinus = () => {
-    if (!count <= 0) {
+    if (count > 0) {
       setCount((pre) => pre - 1);
     }
   };
