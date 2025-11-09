@@ -14,3 +14,6 @@ A simple and elegant counter app built using **React + Vite** and **Tailwind CSS
 - React
 - Vite
 - Tailwind CSS
+
+## Live demo link
+- https://counterbyamarnaath.netlify.app/
