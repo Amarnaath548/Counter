@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Counter from "./Counter";
 import Intro from "./Intro";
-import Menu from ".//Menu";
+import Menu from "./Menu";
+import Modal from "./Modal";
 
 const Container = () => {
   const [count, setCount] = useState(0);
+  const [open, setOpen] = useState(false);
   const [background, setBackground] = useState(
     "bg-linear-to-r from-gray-900 via-gray-800 to-gray-900"
   );
@@ -37,8 +39,18 @@ const Container = () => {
   };
 
   const resetCount = () => {
-    setCount(0);
+    setOpen(true);
+    
   };
+  
+  const handleYes=()=>{
+      setCount(0);
+      setOpen(false)
+  }
+
+  const handleNo=()=>{
+    setOpen(false);
+  }
 
   const inputCount = (e) => {
     if (e.target.value >= 0) {
@@ -53,7 +65,7 @@ const Container = () => {
         <Intro />
       </header>
       <main
-        className={`h-screen flex justify-center items-center flex-col gap-5 ${background}`}
+        className={`h-screen  flex justify-center items-center flex-col gap-5 ${background}`}
       >
         <Menu
           resetCount={resetCount}
@@ -67,6 +79,12 @@ const Container = () => {
           handlePlus={handlePlus}
           count={count}
         />
+        <Modal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        onYes={handleYes}
+        onNo={handleNo}
+      />
       </main>
     </div>
   );

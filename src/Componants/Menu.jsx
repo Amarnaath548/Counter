@@ -18,7 +18,7 @@ const Menu = ({
   };
   return (
     <>
-      <div className="w-1/4 flex justify-between">
+      <div className="flex gap-4 md:gap-7">
         <img src={info} className="invert cursor-pointer" alt="" />
         <img
           src={settings}
