@@ -23,6 +23,10 @@
   }
 }
 
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-out;
+}
+
 @keyframes scaleIn {
   from {
     transform: scale(0.8);
@@ -34,6 +38,4 @@
   }
 }
 
-.animate-scaleIn {
-  animation: scaleIn 0.2s ease-out;
-}
+
