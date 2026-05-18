@@ -54,7 +54,7 @@ const Container = () => {
 
   const inputCount = (e) => {
     if (e.target.value >= 0) {
-      setCount(e.target.value);
+      setCount(Number(e.target.value));
     }
   };
   return (
